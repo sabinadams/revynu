@@ -1,0 +1,28 @@
+<div class="login-box">
+  <form >
+    <ion-row>
+      <ion-col>
+        <ion-list inset>
+          
+          <ion-item>
+            <ion-input type="text" placeholder="Username" name="username" [(ngModel)]="credentials.username" required></ion-input>
+          </ion-item>
+          
+          <ion-item>
+            <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="credentials.password" required></ion-input>
+          </ion-item>
+          
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <ion-col class="signup-col">
+        <button ion-button class="submit-btn" full (click)="login()">Login</button>
+        <button ion-button class="register-btn" block clear (click)="changeView('register')">Create New Account</button>
+        <button ion-button class="forgot-password-btn" block clear (click)="changeView('forgotpassword')">I Forgot My Password</button>
+      </ion-col>
+    </ion-row>
+    
+  </form>
+</div>

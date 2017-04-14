@@ -1,0 +1,32 @@
+<ion-content class="login-content" padding>
+  <ion-row class="logo-row">
+    <ion-col></ion-col>
+    <ion-col width-67>
+      <img src="../../assets/images/logo.png"/>
+      <h2  class="title">Revynu</h2>
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+  <login-form [_authService]="_authService" 
+              [TabsPage]="tabsPage"
+              [Alerts]="_alerts"
+              [Loader]="_loadingController"
+              (viewSwap)="handleChangeView($event)" 
+              *ngIf="currentView == 'login'">
+  </login-form>
+  <register-form [_authService]="_authService" 
+                 [TabsPage]="tabsPage"
+                 [Alerts]="_alerts"
+                 [Loader]="_loadingController"
+                 (viewSwap)="handleChangeView($event)" 
+                 *ngIf="currentView == 'register'">
+  </register-form>
+
+  <forgot-password [_authService]="_authService" 
+                   [TabsPage]="tabsPage"
+                   [Alerts]="_alerts"
+                   [Loader]="_loadingController"
+                   (viewSwap)="handleChangeView($event)" 
+                   *ngIf="currentView == 'forgotpassword'">
+  </forgot-password>
+</ion-content>
